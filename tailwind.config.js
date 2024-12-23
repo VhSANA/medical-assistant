@@ -1,6 +1,10 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 
+
+const rtl = require('tailwindcss-rtl');
+const flowbite = require("flowbite-react/tailwind");
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -8,6 +12,8 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.jsx',
+        "./node_modules/tailwind-datepicker-react/dist/**/*.js",
+        flowbite.content(),
     ],
 
     theme: {
@@ -18,5 +24,7 @@ export default {
         },
     },
 
-    plugins: [forms],
+    plugins: [forms, rtl,
+        flowbite.plugin(),
+    ],
 };
