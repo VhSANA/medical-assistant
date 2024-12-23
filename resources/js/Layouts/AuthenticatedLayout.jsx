@@ -28,7 +28,19 @@ export default function AuthenticatedLayout({ header, children }) {
                                     href={route('dashboard')}
                                     active={route().current('dashboard')}
                                 >
-                                    Dashboard
+                                    داشبورد
+                                </NavLink>
+                                <NavLink
+                                    href={route('doctor.all.patients')}
+                                    active={route().current('doctor.all.patients')}
+                                >
+                                    دکتر
+                                </NavLink>
+                                <NavLink
+                                    href={route('patient.fast.register')}
+                                    active={route().current('patient.fast.register')}
+                                >
+                                    منشی
                                 </NavLink>
                             </div>
                         </div>
